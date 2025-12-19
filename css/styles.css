@@ -2,70 +2,104 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Georgia, serif;
 }
 
+/* ===== ACHTERGROND ===== */
 body {
+  font-family: Georgia, "Times New Roman", serif;
   min-height: 100vh;
-  background: #f4f1ec;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2c2c2c;
+
+  background-image: url("/images/achtergrond1.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
+/* ===== CARD ===== */
 .card {
-  background: #ffffff;
-  padding: 40px;
-  max-width: 420px;
+  background: rgba(255, 255, 255);
+  padding: 42px;
+  max-width: 440px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.18);
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* ===== TEKST ===== */
 h1 {
-  margin-bottom: 20px;
-  font-size: 28px;
+  margin-bottom: 18px;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  color: #1f2430;
 }
 
 p {
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 15px;
+  color: #3a3a3a;
 }
 
+/* ===== INPUT ===== */
 input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+
+  border: 1px solid #c9c6bf;
+  border-radius: 8px;
+
   font-size: 14px;
 }
 
+input:focus {
+  outline: none;
+  border-color: #23304f;
+  box-shadow: 0 0 0 2px #23304f;
+}
+
+/* ===== BUTTON (Frans accent) ===== */
 button {
   width: 100%;
-  padding: 12px;
-  background: #2c2c2c;
+  padding: 13px;
+
+  background: #23304f; /* blauw */
   color: #ffffff;
+
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+
   font-size: 15px;
+  letter-spacing: 0.3px;
   cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.05s ease;
 }
 
 button:hover {
-  background: #000000;
+  background: #48629e;
 }
 
+button:active {
+  transform: translateY(1px);
+}
+
+/* ===== ERROR ===== */
 .error {
   margin-top: 10px;
-  color: #b00020;
   font-size: 14px;
+  color: #9b1c2f;
 }
 
+/* ===== QR ===== */
 .qr {
-  margin-top: 20px;
-  width: 220px;
+  margin-top: 22px;
+  width: 230px;
   height: auto;
 }
