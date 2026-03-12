@@ -20,42 +20,43 @@ body {
 /* ===== CARD ===== */
 .card {
   background: rgba(255, 255, 255);
-  padding: 42px;
-  max-width: 440px;
+  padding: 60px;                /* was 42px */
+  max-width: 720px;             /* was 440px */
+  width: 90%;                   /* zorgt dat hij mooi schaalt */
   text-align: center;
-  border-radius: 14px;
+  border-radius: 16px;
 
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.18);
+    0 25px 50px rgba(0, 0, 0, 0.20);
 
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* ===== TEKST ===== */
 h1 {
-  margin-bottom: 18px;
-  font-size: 30px;
+  margin-bottom: 24px;
+  font-size: 42px;              /* was 30px */
   letter-spacing: 0.5px;
   color: #1f2430;
 }
 
 p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-  font-size: 15px;
+  margin-bottom: 26px;
+  line-height: 1.7;
+  font-size: 19px;              /* was 15px */
   color: #3a3a3a;
 }
 
 /* ===== INPUT ===== */
 input {
   width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 16px;
+  padding: 18px 20px;           /* was 12px */
+  margin-bottom: 22px;
 
   border: 1px solid #c9c6bf;
-  border-radius: 8px;
+  border-radius: 10px;
 
-  font-size: 14px;
+  font-size: 18px;              /* was 14px */
 }
 
 input:focus {
@@ -64,18 +65,18 @@ input:focus {
   box-shadow: 0 0 0 2px #23304f;
 }
 
-/* ===== BUTTON (Frans accent) ===== */
+/* ===== BUTTON ===== */
 button {
   width: 100%;
-  padding: 13px;
+  padding: 18px;
 
-  background: #23304f; /* blauw */
+  background: #23304f;
   color: #ffffff;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
 
-  font-size: 15px;
+  font-size: 19px;              /* was 15px */
   letter-spacing: 0.3px;
   cursor: pointer;
 
@@ -92,14 +93,15 @@ button:active {
 
 /* ===== ERROR ===== */
 .error {
-  margin-top: 10px;
-  font-size: 14px;
+  margin-top: 14px;
+  font-size: 16px;
   color: #9b1c2f;
 }
 
 /* ===== QR ===== */
 .qr {
   margin-top: 22px;
-  width: 230px;
+  width: 400px;
+  max-width: 100%;
   height: auto;
 }
