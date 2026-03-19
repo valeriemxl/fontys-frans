@@ -11,72 +11,76 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 32px;
 
   background-image: url("../images/x.jpeg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ===== CARD ===== */
 .card {
   background: rgba(255, 255, 255);
-  padding: 60px;                /* was 42px */
-  max-width: 720px;             /* was 440px */
-  width: 90%;                   /* zorgt dat hij mooi schaalt */
+  padding: 36px 32px;
+  /* iets meer ademruimte rondom tekst */
+  width: 100%;
+  max-width: 460px;
+  /* smaller en cleaner */
   text-align: center;
-  border-radius: 16px;
+  border-radius: 14px;
 
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.20);
-
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* ===== TEKST ===== */
 h1 {
-  margin-bottom: 24px;
-  font-size: 42px;              /* was 30px */
-  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+  /* meer ruimte onder titel */
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  letter-spacing: 0.4px;
   color: #1f2430;
 }
 
 p {
-  margin-bottom: 26px;
-  line-height: 1.7;
-  font-size: 19px;              /* was 15px */
+  margin-bottom: 18px;
+  line-height: 1.6;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
   color: #3a3a3a;
 }
 
 /* ===== INPUT ===== */
 input {
   width: 100%;
-  padding: 18px 20px;           /* was 12px */
-  margin-bottom: 22px;
+  padding: 12px 14px;
+  margin-top: 8px;
+  margin-bottom: 16px;
 
   border: 1px solid #c9c6bf;
-  border-radius: 10px;
+  border-radius: 8px;
 
-  font-size: 18px;              /* was 14px */
+  font-size: 0.95rem;
 }
 
 input:focus {
   outline: none;
   border-color: #23304f;
-  box-shadow: 0 0 0 2px #23304f;
+  box-shadow: 0 0 0 2px rgba(35, 48, 79, 0.2);
 }
 
 /* ===== BUTTON ===== */
 button {
   width: 100%;
-  padding: 18px;
+  padding: 12px;
 
   background: #23304f;
   color: #ffffff;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
 
-  font-size: 19px;              /* was 15px */
+  font-size: 0.95rem;
   letter-spacing: 0.3px;
   cursor: pointer;
 
@@ -93,15 +97,61 @@ button:active {
 
 /* ===== ERROR ===== */
 .error {
-  margin-top: 14px;
-  font-size: 16px;
+  margin-top: 10px;
+  font-size: 0.85rem;
   color: #9b1c2f;
 }
 
 /* ===== QR ===== */
 .qr {
-  margin-top: 22px;
-  width: 400px;
-  max-width: 100%;
+  margin-top: 26px;
+  width: 100%;
+  max-width: 300px;
+  /* iets kleiner voor balans */
   height: auto;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 24px;
+  }
+
+  .card {
+    padding: 28px 24px;
+    max-width: 90%;
+  }
+}
+
+/* ===== MOBIEL ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 24px 20px;
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  input,
+  button {
+    padding: 11px;
+  }
+
+  .qr {
+    max-width: 100%;
+  }
 }
